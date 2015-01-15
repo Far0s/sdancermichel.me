@@ -1,0 +1,311 @@
+/*================================== 
+BASIC ELEMENTS and TYPOGRAPHY styles
+==================================*/
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+ 	font-family: Arial, sans-serif;
+  	font-size: 1em;
+  	text-align: center;
+	color: #677179;
+	background: url('../img/degradeblue.svg') fixed no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+    margin: 0;
+  }
+
+h1, h2, h3, h4, h5 {
+  	font-family: Helvetica, Times, sans-serif;
+  	color: #111;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+a, a:visited, a:active {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+.block {
+	margin-bottom: 100px !important;
+}
+
+
+/*=========== 
+HEADER styles
+===========*/
+
+.logo {
+	margin-bottom: 30px;
+	position: static;
+	border-radius: 5px;
+}
+
+.logo img {
+	height: 20%;
+	max-height: 100px;
+	max-width: 100px;
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	border: 4px solid white;
+	border-radius: 100%;
+	z-index: 1;
+	overflow: hidden;
+	box-shadow: #213d5c 0px 5px 29px -2px;
+	background-clip: border-box;
+	background-origin: padding-box;
+	-webkit-transition: all 0.3s ease;
+	   -moz-transition: all 0.3s ease;
+	     -o-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
+}
+
+img:hover {
+	-webkit-transform: scale(1.15);
+	   -moz-transform: scale(1.15);
+	     -o-transform: scale(1.15);
+	        transform: scale(1.15);
+}
+
+#parent:hover #click-content-right, #parent:visited #click-content-right, #parent:hover #click-content-left, #parent:visited #click-content-left {
+    display:block;
+}
+
+#click-content-right {
+    display: none;
+    margin-top: -100px;
+    margin-left: 100px;
+    position: relative;
+    z-index: -1;
+    line-height: 4em;
+    text-align: center;
+    margin-bottom: 43px;
+    -webkit-transition: both 0.5s ease;
+       -moz-transition: both 0.5s ease;
+         -o-transition: both 0.5s ease;
+            transition: both 0.5s ease;
+}
+
+#click-content-left {
+	display: none;
+	margin-top: -100px;
+	margin-right: 150px;
+	position: relative;
+	z-index: -1;
+	line-height: 4em;
+	text-align: center;
+	margin-bottom: 43px;
+	-webkit-transition: both 0.5s ease;
+       -moz-transition: both 0.5s ease;
+         -o-transition: both 0.5s ease;
+            transition: both 0.5s ease;
+}
+
+#click-content-left h2 {
+	color: white;
+}
+
+i {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	border-bottom: 0px solid white;    
+	margin-right: 40px; 
+    width: 0px;
+    z-index: -1;
+    -webkit-transition: 0.5s ease;
+       -moz-transition: 0.5s ease;
+         -o-transition: 0.5s ease;
+            transition: 0.5s ease;
+}
+
+i:hover {
+    border-bottom: 3px solid white;
+    width: 25px;
+    margin-right: 15px;
+    -webkit-transition: 0.5s ease;
+       -moz-transition: 0.5s ease;
+         -o-transition: 0.5s ease;
+            transition: 0.5s ease;
+}
+
+/*=================
+MAIN CONTENT styles
+=================*/
+
+
+#etudes li, #ppro li {
+	font-size: 1em;
+	list-style-type: none;
+	text-align: left;
+}
+
+hr {
+	align: center;
+	width: 30%;
+}
+
+.wrapper {
+	width: 50%;
+	height: 100%;
+	margin: auto;
+	padding-top: 80px;
+	border-radius: 10px;
+}
+
+.block {
+	padding: 3%;
+	background-color: white;
+	line-height: 150%;
+	border-radius: 5px;
+	box-shadow: #213d5c 0px 5px 29px -2px;
+}
+
+.footer {
+	font-size: 0.8em;
+}
+
+/*=============================
+ANIMATIONS and KEYFRAMES styles
+=============================*/
+
+.animated {
+	-webkit-animation-name: animated;
+	   -moz-animation-name: animated;
+	    -ms-aniamtion-name: animated;
+	     -o-animation-name: animated;
+	        animation-name: animated;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+        -ms-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+       -moz-animation-duration: 1.5s;
+        -ms-animation-duration: 1.5s;
+         -o-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+}
+
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	   -moz-animation-name: fadeInDown;
+	    -ms-animation-name: fadeInDown;
+	     -o-animation-name: fadeInDown;
+	        animation-name: fadeInDown;
+}
+
+.fadeInRight {
+	-webkit-animation-name: fadeInRight;
+	   -moz-animation-name: fadeInRight;
+	    -ms-animation-name: fadeInRight;
+	     -o-animation-name: fadeInRight;
+	        animation-name: fadeInRight;
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	    -ms-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+        -ms-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+.fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	   -moz-animation-name: fadeInLeft;
+	    -ms-animation-name: fadeInLeft;
+	     -o-animation-name: fadeInLeft;
+	        animation-name: fadeInLeft;
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	    -ms-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+        -ms-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes fadeInDown {
+	0%   { opacity: 0; -webkit-transform: translateY(-50px); }
+	100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+@-moz-keyframes fadeInDown {
+	0%   { opacity: 0; -moz-transform: translateY(-50px); } 
+	100% { opacity: 1; -moz-transform: translateY(0); }
+}
+
+@-o-keyframes fadeInDown {
+	0%   { opacity: 0; -o-transform: translateY(-50px); }
+	100% { opacity: 1; -o-transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+	0%   { opacity: 0; transform: translateY(-50px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+
+@-webkit-keyframes fadeInRight {
+	0%   { opacity: 0; -webkit-transform: translateX(0); }
+	100% { opacity: 1; -webkit-transform: translateX(120px); }
+}
+
+@-moz-keyframes fadeInRight {
+	0%   { opacity: 0; -moz-transform: translateX(0); } 
+	100% { opacity: 1; -moz-transform: translateX(120px); }
+}
+
+@-o-keyframes fadeInRight {
+	0%   { opacity: 0; -o-transform: translateX(0); }
+	100% { opacity: 1; -o-transform: translateX(120px); }
+}
+
+@keyframes fadeInRight {
+	0%   { opacity: 0; transform: translateX(0); }
+	100% { opacity: 1; transform: translateX(120px); }
+}
+
+
+@-webkit-keyframes fadeInLeft {
+	0%   { opacity: 0; -webkit-transform: translateX(0); }
+	100% { opacity: 1; -webkit-transform: translateX(-120px); }
+}
+
+@-moz-keyframes fadeInLeft {
+	0%   { opacity: 0; -moz-transform: translateX(0); } 
+	100% { opacity: 1; -moz-transform: translateX(-120px); }
+}
+
+@-o-keyframes fadeInLeft {
+	0%   { opacity: 0; -o-transform: translateX(0); }
+	100% { opacity: 1; -o-transform: translateX(-120px); }
+}
+
+@keyframes fadeInLeft {
+	0%   { opacity: 0; transform: translateX(0); }
+	100% { opacity: 1; transform: translateX(-120px); }
+}
