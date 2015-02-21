@@ -1,0 +1,88 @@
+body {
+	width: 100%;
+	height: 100vh;
+	font-family: Menlo, Arial, 'sans-serif' ;
+	background-color: #000;
+	color: #fefefe;
+	background: url(../img/bg.jpg) no-repeat;
+	background-size: cover;
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.5em;
+	line-height: 1.5em;
+}
+
+h2 {
+	font-size: 1.75em;
+	line-height: 1em;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h2>a {
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.3s;
+	padding: 5px;
+	border-bottom: 5px solid #175;
+	border-radius: 0px;
+	background-color: transparent;
+}
+
+h2>a:hover {
+	color: #fff;
+	padding-bottom: 0;
+	border-radius: 3px;
+	border-bottom: 5px solid transparent;
+	background-color: #175;
+}
+
+ul a {
+	color: #fff;
+}
+
+h1>span {
+	font-style: italic;
+}
+
+.container {
+ 	display: -webkit-flex;
+ 	display: -ms-flexbox;
+ 	display: flex;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	min-height: 100%;
+	width: 100%;
+	-webkit-flex-flow: column nowrap;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+li {
+	display: inline-block;
+	margin: 0 15px;
+	transition: all 0.3s;
+}
+
+.fa {
+	transition: all 0.5s;
+	padding: 5px 10px;
+	border-bottom: 5px solid #175;
+	background-color: transparent;
+}
+
+.fa:hover {
+	color: #175;
+	background-color: #175;
+	color: white;
+	border-radius: 5px;
+	border-bottom: 0px solid #175;
+}
