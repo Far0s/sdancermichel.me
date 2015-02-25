@@ -1,3 +1,7 @@
+/*===========================
+GENERAL AND INDEX.HTML STYLES
+===========================*/
+
 html {
 	width: 100%;
 	height: 100vh;
@@ -87,9 +91,11 @@ a:hover {
 	height: 450px;
 	background: url(../img/thumb_suaudeau.png)center no-repeat;
 	background-size: cover;
-	border: 4px solid #117755;
+	border:none;
 	transition: all 0.5s;
 	margin-bottom: 20px;
+	border-bottom: 4px solid rgba(17, 119, 85, 0.4);
+	border-radius: 4px;
 }
 
 .thumbnail a {
@@ -97,20 +103,46 @@ a:hover {
 	opacity: 0;
 	position: relative;
 	top: 215px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 	border: none;
 }
 
 .thumbnail a:hover {
 	opacity: 1;
 	color: #fefefe;
-	background-color: rgba(17, 119, 85, 0.7);
+	background-color: rgba(17, 119, 85, 0.5);
 }
-
-
-
 
 footer {
 	text-align: center;
 	font-size: 0.6em;
 	margin: 80px auto 10px auto;
 }
+
+
+/*========================
+ABOUT.HTML SPECIFIC STYLES
+========================*/
+
+header a {
+	border: none;
+	transition: all 0.3s;
+}
+
+header a:hover {
+	border: none;
+	background: transparent;
+}
+
+header img {
+	transition: all 0.3s ease-in-out;
+}
+
+header img:hover{
+	background-color: rgba(17, 119, 85, 1);
+}
+
+/*=======================
+WORK.HTML SPECIFIC STYLES
+=======================*/
