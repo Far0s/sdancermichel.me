@@ -54,12 +54,13 @@ section {
 
 .learn-more {
 	font-size: 0.8em;
+	line-height: 1.35em;
 	color: rgba(17, 119, 85, 0.6);
 	border-color: rgba(17, 119, 85, 0.6);
 }
 
 .learn-more::before {
-	content: "➝";
+	content: "➝ ";
 	font-size: 1.2em;
 }
 
@@ -102,12 +103,14 @@ a:hover {
 .thumbnail a:hover {
 	opacity: 1;
 	color: #fefefe;
-	background-color: rgba(17, 119, 85, 0.5);
+	background-color: rgba(17, 119, 85, 0.7);
 }
+
+
+
 
 footer {
 	text-align: center;
 	font-size: 0.6em;
-	margin-bottom: 10px;
+	margin: 80px auto 10px auto;
 }
-
