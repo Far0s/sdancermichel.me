@@ -46,7 +46,7 @@ p {
 	letter-spacing: 0.5px;
 	text-align: left;
 	margin-bottom: 1em;
-	transition: all 0.5s;
+	transition: 0.5s;
 }
 
 section {
@@ -77,7 +77,7 @@ section {
 a {
 	color: #117755;
 	text-decoration: none;
-	transition: all 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
 	padding: 5px 5px 0 5px;
 	border-bottom: 3px solid #117755;
 }
@@ -93,7 +93,7 @@ a:hover {
 	background: url(../img/thumb_suaudeau.png)center no-repeat;
 	background-size: cover;
 	border:none;
-	transition: all 0.5s;
+	transition: 0.5s;
 	margin-bottom: 20px;
 	border-bottom: 4px solid rgba(17, 119, 85, 0.4);
 	border-radius: 4px;
@@ -128,7 +128,7 @@ ABOUT.HTML SPECIFIC STYLES
 
 header a {
 	border: none;
-	transition: all 0.3s;
+	transition: 0.3s;
 }
 
 header a:hover {
@@ -137,7 +137,7 @@ header a:hover {
 }
 
 header a>img {
-	transition: all 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
 }
 
 header a>img:hover{
