@@ -87,10 +87,13 @@ a:hover {
 	background-color: #117755;
 }
 
+.suaudeau {
+	background: url(../img/thumb_suaudeau.png)center no-repeat;
+}
+
 .thumbnail {
 	width: 100%;
 	height: 450px;
-	background: url(../img/thumb_suaudeau.png)center no-repeat;
 	background-size: cover;
 	border:none;
 	transition: 0.5s;
