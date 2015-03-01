@@ -8,7 +8,7 @@ html {
 	font-family: Menlo, Arial, 'sans-serif';
 	color: #175;
 	background-color: rgba(17, 119, 85, 0.05);
-	font-size: 20px;
+	font-size: 1.25em;
 	text-align: center;
 	max-width: 768px;
 	width: 100%;
@@ -88,7 +88,7 @@ a:hover {
 }
 
 .suaudeau {
-	background: url(../img/thumb_suaudeau.png)center no-repeat;
+	background: url(../img/thumb_suaudeau.png) center no-repeat;
 }
 
 .thumbnail {
@@ -168,3 +168,20 @@ header a>img:hover{
 /*=======================
 WORK.HTML SPECIFIC STYLES
 =======================*/
+
+.hexoplus {
+	background: url(../img/thumb_hexoplus.png) center no-repeat;
+}
+
+.hexoplus a {
+	padding: 213px 262px 213px 263px;
+}
+
+.carredartistes {
+	background: url(../img/thumb_carredartistes.png) center no-repeat;
+}
+
+.carredartistes a {
+	padding: 213px 214px;
+}
+
