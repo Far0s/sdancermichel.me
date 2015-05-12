@@ -1,4 +1,4 @@
 $(window).load(function() {
   console.log('All files loaded !');
-  $('#loader').delay(1000).fadeOut("slow");
+  $('#loader').delay(500).fadeOut(500);
 });
