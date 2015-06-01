@@ -69,7 +69,7 @@ body {
   /* line 74, /Users/sebastiendancermichel/Documents/EWORK/Sites Web perso/sdancermichel.me/wip/css/style.scss */
   #mainContainer {
     height: 100%;
-    border: 30px solid #fff;
+    border: 30px solid rgba(255, 255, 255, 0.9);
     padding: 15% 10%;
     background-size: 55%;
     background-position: center 30%; }
