@@ -1,0 +1,42 @@
+// REACTIONS
+
+.reactions {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 100px;
+  padding: 28px 25px 15px 25px;
+  box-sizing: border-box;
+  background: linear-gradient(to top, $lightblue, $lightblue 40%, rgba($lightblue, 0));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: #{$large}) {
+    min-height: 120px;
+    max-width: 500px;
+    left: calc(50% - 250px);
+  }
+  .reaction__button {
+    border-radius: 20px;
+    background: $teal;
+    height: 41px;
+    padding: 6px 22px;
+    margin: 5px;
+    box-sizing: border-box;
+    transition: .2s ease-out;
+    cursor: pointer;
+    > p {
+      color: $white;
+      font-weight: 400;
+    }
+    @media screen and (min-width: #{$large}) {
+      height: 59px;
+      padding: 12px 36px;
+      border-radius: 30px;
+    }
+    &:hover, &:focus {
+      box-shadow: $teal 0 2px 10px 0;
+    }
+  }
+}
