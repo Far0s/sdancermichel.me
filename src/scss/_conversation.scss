@@ -1,0 +1,67 @@
+// CONVERSATION
+
+.wrapper {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 187px);
+  height: 100vh;
+  @media screen and (min-width: #{$large}) {
+    left: calc(50% - 250px);
+  }
+}
+
+.conversation {
+  width: 100vw;
+  max-width: 375px;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  padding: 10px 30px 30px 30px;
+  margin: auto;
+  box-sizing: border-box;
+  @media screen and (min-width: #{$large}) {
+    max-width: 500px;
+    padding: 10px 0 30px 0;
+  }
+  .conversation__bubble {
+    background: $white;
+    border-radius: 20px 20px 0 20px;
+    padding: 22px;
+    margin-bottom: 10px;
+    height: auto;
+    transform: translate3d(0, 20px, 0);
+    opacity: 1;
+    transition: transform .5s ease-out, opacity .5s ease-out;
+    @media screen and (min-width: #{$large}) {
+      border-radius: 30px 30px 0 30px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    &--small {
+      width: 66px;
+      height: 41px;
+      padding: 6px 22px;
+      box-sizing: border-box;
+      margin-left: auto;
+      @media screen and (min-width: #{$large}) {
+        width: 96px;
+        height: 59px;
+        padding: 12px 36px;
+      }
+    }
+    &.hidden {
+      height: 0;
+      padding: 0;
+      margin: 0;
+      transform: translate3d(0,0,0);
+      opacity: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 40px;
+      @media screen and (min-width: #{$large}) {
+        margin-bottom: 95px;
+      }
+    }
+  }
+}

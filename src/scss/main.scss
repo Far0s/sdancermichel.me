@@ -1,2 +1,35 @@
 @import 'variables';
 @import 'utilities';
+@import 'conversation';
+
+body {
+  background: $lightblue;
+  width: 100%;
+  height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 300;
+  color: $grey;
+  margin: 0;
+  text-decoration: none;
+  @media screen and (min-width: #{$large}) {
+    font-size: 22px;
+    line-height: 35px;
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  font-weight: 600;
+  color: $teal;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
