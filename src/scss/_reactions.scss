@@ -12,6 +12,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+  pointer-events: all;
+  transform: translate3d(0, 0px, 0);
+  transition: .5s ease-out 11s;
   @media screen and (min-width: #{$large}) {
     min-height: 120px;
     max-width: 500px;
@@ -38,5 +42,10 @@
     &:hover, &:focus {
       box-shadow: $teal 0 2px 10px 0;
     }
+  }
+  &.hidden {
+    pointer-events: none;
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
   }
 }
