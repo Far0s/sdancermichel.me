@@ -30,9 +30,9 @@
       margin-bottom: 20px;
     }
     p {
-      max-width: 271px;
+      max-width: calc(100vw - 104px);
       @media screen and (min-width: #{$large}) {
-        max-width: 444px;
+        max-width: calc(500px - 56px);
       }
     }
     &--small {
