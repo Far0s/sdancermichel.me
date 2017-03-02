@@ -5,28 +5,31 @@ html(dir='ltr' lang='en' class='no-js')
   body
     div.wrapper
       div.conversation
-        section.conversation__bubble.conversation__bubble--general.hidden
+        div.conversation__bubble.conversation__bubble--general.hidden
           p.
             Hi! My name is #[strong Sébastien Dancer-Michel]. I am a 22 years old French student at #[a(href='https://hetic.net' target='_blank') HETIC], Paris.
 
-        section.conversation__bubble.conversation__bubble--general.hidden
+        div.conversation__bubble.conversation__bubble--general.hidden
           p.
             I’m a #[strong junior front-end developer], also interested in UI/UX design and generative design.
           p.
             Aside from web stuff, I have been playing handball since I was 11, I love cats and red pandas. I am deeply in love with #[a(href='https://www.google.fr/search?safe=off&biw=1440&bih=983&tbm=isch&sa=1&btnG=Rechercher&q=toulouse#q=toulouse&safe=off&tbm=isch&tbs=isz:l&*' target='_blank') Toulouse], my hometown.
 
-        section.conversation__bubble.conversation__bubble--general.hidden
+        div.conversation__bubble.conversation__bubble--general.hidden
           p.
             I #[a(href='https://twitter.com/far0s' target='_blank') tweet] everyday, and I try to #[a(href='https://medium.com/@Far0s' target='_blank') write] when I can. I #[a(href='https://instagram.com/far0s' target='_blank') post pics] of my cats and sometimes #[a(href='https://www.behance.net/sebdancermichel' target='_blank') publish] my design work. But most of all, I #[a(href='https://github.com/far0s' target='_blank') code].
 
-        section.conversation__bubble.conversation__bubble--general.hidden
+        div.conversation__bubble.conversation__bubble--general.hidden
           p.
             Oh! And I’m looking for a #[strong 3 month internship from July to September as a front-end developer], feel free to contact me on the internets (#[a(href='mailto:s.dancermichel@gmail.com' target='_blank') or by mail]) 😎
 
-        section.conversation__bubble.conversation__bubble--general.conversation__bubble--small.hidden
+        div.conversation__bubble.conversation__bubble--general.conversation__bubble--small.hidden
           p ❤️
 
-    div.reactions.hidden
+        //- div.reaction__button.hidden
+        //-   p 🍆
+
+    div.reactions.hidden.first-load
       div.reaction__button
         p 🍆
       div.reaction__button

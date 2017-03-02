@@ -4,7 +4,7 @@
   doc.classList.remove('no-js');
   doc.classList.add('js');
 
-  var bubblesCollection = document.querySelectorAll('.conversation__bubble--general');
+  var bubblesCollection = document.querySelectorAll('.conversation__bubble--general, .conversation .reaction__button');
   var reactionsCollection = document.querySelector('.reactions');
 
   // For debugging
