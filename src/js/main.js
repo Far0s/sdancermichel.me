@@ -12,7 +12,7 @@
   // for (var i = 0; i < bubblesCollection.length; i++) {
   //   bubblesCollection[i].classList.remove('hidden');
   // };
-  reactionsCollection.classList.remove('hidden');
+  // reactionsCollection.classList.remove('hidden');
 
   var i = 0;
   function nextBubble () {
@@ -21,11 +21,10 @@
   };
   function changeBubble () {
     bubblesCollection[i].classList.remove('hidden');
-    console.log(i);
     if (i === 4) {
-      console.log('oh');
       clearInterval(displayBubbles);
       loaderBubble.classList.add('hidden');
+      reactionsCollection.classList.remove('hidden');
     }
   };
   var displayBubbles = window.setInterval(nextBubble, 2000);
