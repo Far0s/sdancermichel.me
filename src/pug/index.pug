@@ -26,22 +26,44 @@ html(dir='ltr' lang='en' class='no-js')
         div.conversation__bubble.conversation__bubble--general.conversation__bubble--small.hidden
           p ❤️
 
-        div.conversation__bubble.conversation__bubble--loader.conversation__bubble--small
+        div.conversation__bubble.conversation__bubble--loader.conversation__bubble--small.hidden
           div.loader
             div.dot.dot1
             div.dot.dot2
             div.dot.dot3
             div.dot.dot4
 
-        //- div.reaction__button.hidden
-        //-   p 🍆
-
     div.reactions.hidden
-      div.reaction__button
+      div.reaction__button(onclick='clickReaction(this)' data-reaction='🍆')
         p 🍆
-      div.reaction__button
+      div.reaction__button(onclick='clickReaction(this)' data-reaction='😸')
         p 😸
-      div.reaction__button
+      div.reaction__button(onclick='clickReaction(this)' data-reaction='🎧')
         p 🎧
+  script(src='js/app.min.js')
+  script(type='text/javascript').
+    // on reactionButton click, generate reaction bubble in the general tree and put back the bubble loader
+    function clickReaction (e) {
+      var dataReaction = e.getAttribute('data-reaction');
+      document.querySelector('.conversation__bubble--loader').parentNode.removeChild(document.querySelector('.conversation__bubble--loader'));
+      window.setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', '<div class="reaction__button"><p>' + dataReaction + '</p></div>')}, 500);
+      window .setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', '<div class="conversation__bubble conversation__bubble--loader conversation__bubble--small"><div class="loader"><div class="dot dot1"></div><div class="dot dot2"></div><div class="dot dot3"></div><div class="dot dot4"></div></div></div>')}, 1000);
+      answerTheQuestion(dataReaction);
+    };
 
-    script(src='js/app.min.js')
+    // function called to instantiate the answer to reaction button called previously
+    function answerTheQuestion (dataReaction) {
+      switch (dataReaction) {
+        case '🍆':
+          console.log(dataReaction);
+          break;
+        case '😸':
+          console.log(dataReaction);
+          break;
+        case '🎧':
+          console.log(dataReaction);
+          break;
+        default:
+          console.log(dataReaction);
+      }
+    };

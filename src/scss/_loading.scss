@@ -1,15 +1,15 @@
 // LOADING BUBBLE
 
 .conversation__bubble--loader {
+  padding: 17px 16px 16px 16px !important;
   .loader {
     position: relative;
-    right: 6px;
     width: 100%;
-    height: 100%;
+    height: 8px;
     display: flex;
     align-items: center;
     @media screen and (min-width: #{$large}) {
-      right: 12px;
+      height: 12px;
     }
     .dot {
       width: 8px;
@@ -40,6 +40,13 @@
       .dot3 { left: 18px; }
       .dot4 { left: 36px; }
     }
+  }
+  @media screen and (min-width: #{$large}) {
+    padding: 24px !important;
+  }
+  &.hidden {
+    padding: 0;
+    margin-bottom: 0 !important;
   }
 }
 
