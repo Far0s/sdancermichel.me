@@ -18,10 +18,16 @@
     changeBubble(bubblesCollection[i]);
     i = (i + 1) % bubblesCollection.length;
   };
+  function scrollToLastBubble () {
+    document.querySelector('.conversation__bubble:last-of-type, .conversation__bubble--loader').scrollIntoView({
+      behavior: 'smooth' // smooth doesn't work, maybe find an alternative for the smooth effect
+    });
+  }
   // Remove the '.hidden' class on the next bubble
   // Stop if reached the end of the tree
   function changeBubble () {
     bubblesCollection[i].classList.remove('hidden');
+    scrollToLastBubble();
     if (i === 4) {
       clearInterval(displayBubbles);
       loaderBubble.classList.add('hidden');
@@ -31,7 +37,6 @@
   // Start the interval and the start delay
   var displayBubbles = window.setInterval(nextBubble, 2000);
   window.setTimeout(displayBubbles, 1000);
-
   // Use it maybe later: addeventlistener to reactionButtonCollection
   // var reactionButtonCollection = document.querySelectorAll('.reactions .reaction__button');
   // for (var j = 0; j < reactionButtonCollection.length; j++) {

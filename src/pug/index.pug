@@ -42,12 +42,19 @@ html(dir='ltr' lang='en' class='no-js')
         p 🎧
   script(src='js/app.min.js')
   script(type='text/javascript').
+    function scrollToLastBubble () {
+      document.querySelector('.conversation__bubble:last-of-type').scrollIntoView({
+        behavior: 'smooth' // smooth doesn't work, maybe find an alternative for the smooth effect
+      });
+    }
     // on reactionButton click, generate reaction bubble in the general tree and put back the bubble loader
     function clickReaction (e) {
       var dataReaction = e.getAttribute('data-reaction');
       document.querySelector('.conversation__bubble--loader').parentNode.removeChild(document.querySelector('.conversation__bubble--loader'));
       window.setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', '<div class="reaction__button"><p>' + dataReaction + '</p></div>')}, 500);
+      scrollToLastBubble();
       window .setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', '<div class="conversation__bubble conversation__bubble--loader conversation__bubble--small"><div class="loader"><div class="dot dot1"></div><div class="dot dot2"></div><div class="dot dot3"></div><div class="dot dot4"></div></div></div>')}, 1000);
+      scrollToLastBubble();
       answerTheQuestion(dataReaction);
     };
 
