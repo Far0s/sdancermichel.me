@@ -21,7 +21,7 @@ html(dir='ltr' lang='en' class='no-js')
 
         div.conversation__bubble.conversation__bubble--general.hidden
           p.
-            Oh! And I’m looking for a #[strong 3 month internship from July to September as a front-end developer], feel free to contact me on the internets (#[a(href='mailto:s.dancermichel@gmail.com') or by mail]) 😎
+            Oh! And I’m looking for a #[strong 3 to 4 months internship starting July 2017 as a front-end developer], feel free to contact me on the internets (#[a(href='mailto:s.dancermichel@gmail.com') or by mail]) 😎
 
         div.conversation__bubble.conversation__bubble--general.conversation__bubble--small.hidden
           p ❤️
@@ -50,27 +50,55 @@ html(dir='ltr' lang='en' class='no-js')
     // on reactionButton click, generate reaction bubble in the general tree and put back the bubble loader
     function clickReaction (e) {
       var dataReaction = e.getAttribute('data-reaction');
+      var reactionBubbleEcho = '<div class="reaction__button"><p>' + dataReaction + '</p></div>';
+      var loaderBubbleEcho = '<div class="conversation__bubble conversation__bubble--loader conversation__bubble--small"><div class="loader"><div class="dot dot1"></div><div class="dot dot2"></div><div class="dot dot3"></div><div class="dot dot4"></div></div></div>';
+
+      document.querySelector('.reactions').classList.add('hidden');
       document.querySelector('.conversation__bubble--loader').parentNode.removeChild(document.querySelector('.conversation__bubble--loader'));
-      window.setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', '<div class="reaction__button"><p>' + dataReaction + '</p></div>')}, 500);
+      window.setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', reactionBubbleEcho)}, 500);
       scrollToLastBubble();
-      window .setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', '<div class="conversation__bubble conversation__bubble--loader conversation__bubble--small"><div class="loader"><div class="dot dot1"></div><div class="dot dot2"></div><div class="dot dot3"></div><div class="dot dot4"></div></div></div>')}, 1000);
+      window.setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', loaderBubbleEcho)}, 1000);
       scrollToLastBubble();
       answerTheQuestion(dataReaction);
     };
 
+    // calls the creation of a bubble, at the end of a defined container
+    function createBubble (container, content) {
+      window.setTimeout(function () {
+        document.querySelector('.conversation__bubble--loader').parentNode.removeChild(document.querySelector('.conversation__bubble--loader'));
+        container.insertAdjacentHTML('beforeend', '<div class="conversation__bubble conversation__bubble--general"><p>' + content + '</p></div>');
+      }, 1500);
+    };
+
     // function called to instantiate the answer to reaction button called previously
     function answerTheQuestion (dataReaction) {
+      var conversation = document.querySelector('.conversation');
       switch (dataReaction) {
         case '🍆':
-          console.log(dataReaction);
+          var content = '';
+          createBubble(conversation, content);
+          window.setTimeout(function () {
+            scrollToLastBubble();
+            document.querySelector('.reactions').classList.remove('hidden');
+          }, 1550);
           break;
         case '😸':
-          console.log(dataReaction);
+          var content = '';
+          createBubble(conversation, content);
+          window.setTimeout(function () {
+            scrollToLastBubble();
+            document.querySelector('.reactions').classList.remove('hidden');
+          }, 1550);
           break;
         case '🎧':
-          console.log(dataReaction);
+          var content = '';
+          createBubble(conversation, content);
+          window.setTimeout(function () {
+            scrollToLastBubble();
+            document.querySelector('.reactions').classList.remove('hidden');
+          }, 1550);
           break;
         default:
-          console.log(dataReaction);
+          return true;
       }
     };
