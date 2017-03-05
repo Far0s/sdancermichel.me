@@ -36,6 +36,10 @@
         max-width: calc(500px - 56px);
       }
     }
+    img {
+      max-width: 100%;
+      margin-top: 12px;
+    }
     &--small {
       width: 66px;
       height: 41px;
