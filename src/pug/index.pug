@@ -44,7 +44,7 @@ html(dir='ltr' lang='en' class='no-js')
   script(type='text/javascript').
     function scrollToLastBubble () {
       document.querySelector('.conversation__bubble:last-of-type').scrollIntoView({
-        behavior: 'smooth' // smooth doesn't work, maybe find an alternative for the smooth effect
+        behavior: 'smooth'
       });
     }
     // on reactionButton click, generate reaction bubble in the general tree and put back the bubble loader
@@ -57,10 +57,14 @@ html(dir='ltr' lang='en' class='no-js')
       if (document.querySelector('.conversation__bubble--loader')) {
         document.querySelector('.conversation__bubble--loader').parentNode.removeChild(document.querySelector('.conversation__bubble--loader'));
       };
-      window.setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', reactionBubbleEcho)}, 500);
-      scrollToLastBubble();
-      window.setTimeout(function () {document.querySelector('.conversation').insertAdjacentHTML('beforeend', loaderBubbleEcho)}, 1000);
-      scrollToLastBubble();
+      window.setTimeout(function () {
+        document.querySelector('.conversation').insertAdjacentHTML('beforeend', reactionBubbleEcho);
+        scrollToLastBubble();
+      }, 500);
+      window.setTimeout(function () {
+        document.querySelector('.conversation').insertAdjacentHTML('beforeend', loaderBubbleEcho);
+        scrollToLastBubble();
+      }, 1000);
       answerTheQuestion(dataReaction);
     };
 
@@ -102,7 +106,7 @@ html(dir='ltr' lang='en' class='no-js')
           break;
         case '🎧':
           var content = '<p>I\'ve been listening to a lot of <a href="https://www.youtube.com/watch?v=JXo1LWv6kO8" target="_blank">Superpoze</a> recently.</p><p>I wrote <a href="https://medium.com/@Far0s/thousand-exploding-suns-71a914e62ec7#.ndbhq5fjx" target="_blank">a few words</a> about it too!</p><img src="images/superpoze.jpg" alt="Superpoze">';
-          var content2 = '<p><a href="https://www.youtube.com/watch?v=M94vOyffoqs" target="_blank">Lemaitre</a> and <a href="https://www.youtube.com/watch?v=p-ZvHDaR72Q" target="_blank">French79</a> are artists who are frequently popping in my queue too!</p><img src="images/lemaitre.jpg" alt="Lemaitre">';
+          var content2 = '<p><a href="https://www.youtube.com/watch?v=M94vOyffoqs" target="_blank">Lemaitre</a> and <a href="https://www.youtube.com/watch?v=p-ZvHDaR72Q" target="_blank">French79</a> are frequently popping in my queue too!</p><img src="images/lemaitre.jpg" alt="Lemaitre">';
           createBubble(conversation, content);
           createBubble(conversation, content2);
           window.setTimeout(function () {

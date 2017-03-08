@@ -20,7 +20,7 @@
   };
   function scrollToLastBubble () {
     document.querySelector('.conversation__bubble:last-of-type, .conversation__bubble--loader').scrollIntoView({
-      behavior: 'smooth' // smooth doesn't work, maybe find an alternative for the smooth effect
+      behavior: 'smooth'
     });
   }
   // Remove the '.hidden' class on the next bubble
