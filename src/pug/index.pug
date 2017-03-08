@@ -34,12 +34,12 @@ html(dir='ltr' lang='en' class='no-js')
             div.dot.dot4
 
     div.reactions.hidden
-      div.reaction__button(onclick='clickReaction(this)' data-reaction='🍆')
-        p 🍆
       div.reaction__button(onclick='clickReaction(this)' data-reaction='😸')
         p 😸
       div.reaction__button(onclick='clickReaction(this)' data-reaction='🎧')
         p 🎧
+      div.reaction__button(onclick='clickReaction(this)' data-reaction='🍆')
+        p 🍆
   script(src='js/app.min.js')
   script(type='text/javascript').
     function scrollToLastBubble () {
@@ -82,18 +82,6 @@ html(dir='ltr' lang='en' class='no-js')
     function answerTheQuestion (dataReaction) {
       var conversation = document.querySelector('.conversation');
       switch (dataReaction) {
-        case '🍆':
-          var content = '<p><em>But you know, I do not think there are good or bad situations. If I were to summarize my life, today with you, I would say that it was at first encounters, people who held out my hand to me at a time when I could not, when I was alone. And it is curious enough to think that chance, encounters forge a destiny. Because when one has the taste for the thing, when one has the taste of the thing well done, the beautiful gesture, sometimes one does not find the opposite opposite, I would say the mirror that helps you move forward.</em></p>';
-          var content2 = '<p><em>So I do not, as I said, since I could, and I say thank you to life, I say thank you, I sing life, I dance life, I am only love. And finally when many people today tell me: "But how do you do to have this humanity? "Well, I answer them very simply, I say to them:" It is this taste of love ", that taste, that pushed me today to undertake a mechanical construction, but tomorrow who knows? Maybe simply to put myself at the service of the community, to give the gift, the gift of self.</em></p>';
-          var content3 = '<p><em>— <a href="https://youtu.be/X2-bXTl1-mo" target="_blank">Otis</a></em></p>';
-          createBubble(conversation, content);
-          createBubble(conversation, content2);
-          createBubble(conversation, content3);
-          window.setTimeout(function () {
-            scrollToLastBubble();
-            document.querySelector('.reactions').classList.remove('hidden');
-          }, 1550);
-          break;
         case '😸':
           var content = '<p>I love cats. I have two little angels named Malice and Chanelle. They\'re both in Toulouse with my parents, and I miss them so much. So if you have a cat, don\'t worry if I want to hug them when I see them, okay?</p><img src="images/chanelle.jpg" alt="Chanelle">';
           var content2 = '<p>Also, can someone explain to me why there isn\'t any red panda emoji ? 🤔</p>';
@@ -116,6 +104,18 @@ html(dir='ltr' lang='en' class='no-js')
           break;
         default:
           return true;
+        case '🍆':
+          var content = '<p><em>But you know, I do not think there are good or bad situations. If I were to summarize my life, today with you, I would say that it was at first encounters, people who held out my hand to me at a time when I could not, when I was alone. And it is curious enough to think that chance, encounters forge a destiny. Because when one has the taste for the thing, when one has the taste of the thing well done, the beautiful gesture, sometimes one does not find the opposite opposite, I would say the mirror that helps you move forward.</em></p>';
+          var content2 = '<p><em>So I do not, as I said, since I could, and I say thank you to life, I say thank you, I sing life, I dance life, I am only love. And finally when many people today tell me: "But how do you do to have this humanity? "Well, I answer them very simply, I say to them:" It is this taste of love ", that taste, that pushed me today to undertake a mechanical construction, but tomorrow who knows? Maybe simply to put myself at the service of the community, to give the gift, the gift of self.</em></p>';
+          var content3 = '<p><em>— <a href="https://youtu.be/X2-bXTl1-mo" target="_blank">Otis</a></em></p>';
+          createBubble(conversation, content);
+          createBubble(conversation, content2);
+          createBubble(conversation, content3);
+          window.setTimeout(function () {
+            scrollToLastBubble();
+            document.querySelector('.reactions').classList.remove('hidden');
+          }, 1550);
+          break;
       }
     };
   script.

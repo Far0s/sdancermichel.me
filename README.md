@@ -1,4 +1,4 @@
-# http://sdancermichel.me
+# https://sdancermichel.me
 
 Sébastien Dancer-Michel's personal website
 
