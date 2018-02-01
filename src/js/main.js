@@ -31,11 +31,6 @@
         }
     };
     // Start the interval and the start delay
-    var displayBubbles = window.setInterval(nextBubble, 2000);
+    var displayBubbles = window.setInterval(nextBubble, 3000);
     window.setTimeout(displayBubbles, 1000);
-    // Use it maybe later: addeventlistener to reactionButtonCollection
-    // var reactionButtonCollection = document.querySelectorAll('.reactions .reaction__button');
-    // for (var j = 0; j < reactionButtonCollection.length; j++) {
-    //   reactionButtonCollection[j].addEventListener('click', clickReaction(this));
-    // }
 }());

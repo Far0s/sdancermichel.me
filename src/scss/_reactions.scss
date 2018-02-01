@@ -14,11 +14,6 @@
     pointer-events: all;
     transform: translate3d(0, 0px, 0);
     transition: .5s ease-out 1s;
-    @media screen and (min-width: #{$large}) {
-        min-height: 120px;
-        max-width: 500px;
-        left: calc(50% - 250px);
-    }
     &.hidden {
         pointer-events: none;
         opacity: 0;
@@ -40,11 +35,6 @@
         color: $white;
         font-weight: 400;
     }
-    @media screen and (min-width: #{$large}) {
-        height: 59px;
-        padding: 12px 36px;
-        border-radius: 30px;
-    }
     &:hover,
     &:focus {
         box-shadow: $teal 0 2px 10px 0;
@@ -58,9 +48,6 @@
     transform: translate3d(0, 0px, 0);
     opacity: 1;
     transition: transform .5s ease-out, opacity .5s ease-out;
-    @media screen and (min-width: #{$large}) {
-        margin: 0 auto 20px 0;
-    }
     &:hover,
     &:active {
         box-shadow: none;

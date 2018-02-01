@@ -20,17 +20,13 @@ h6,
 p,
 span,
 a {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', sans-serif;
     font-size: 18px;
-    line-height: 29px;
+    line-height: 1.75em;
     font-weight: 300;
     color: $grey;
     margin: 0;
     text-decoration: none;
-    @media screen and (min-width: #{$large}) {
-        font-size: 22px;
-        line-height: 35px;
-    }
 }
 
 .wrapper {

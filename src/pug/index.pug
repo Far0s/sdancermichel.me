@@ -7,13 +7,13 @@ html(dir='ltr' lang='en' class='no-js')
       div.conversation
         div.conversation__bubble.conversation__bubble--general.hidden
           p.
-            Hi! My name is #[strong Sébastien Dancer-Michel]. I am a 22 years old French student at #[a(href='https://hetic.net' target='_blank') HETIC], Paris.
+            Hi! My name is #[strong Sébastien Dancer-Michel]. I am a 4th year student at #[a(href='https://hetic.net' target='_blank') HETIC], Paris.
 
         div.conversation__bubble.conversation__bubble--general.hidden
           p.
-            I’m a #[strong junior front-end developer], also interested in UI/UX design and generative design.
+            I’m a #[strong front-end developer], and I focus on creating modern, accessible and performant websites.
           p.
-            Aside from web stuff, I have been playing handball since I was 11, I love cats and red pandas. I am deeply in love with #[a(href='https://www.google.fr/search?safe=off&biw=1440&bih=983&tbm=isch&sa=1&btnG=Rechercher&q=toulouse#q=toulouse&safe=off&tbm=isch&tbs=isz:l&*' target='_blank') Toulouse], my hometown.
+            I also love to fiddle with p5.js and generative design and learn about anything new in tech.
 
         div.conversation__bubble.conversation__bubble--general.hidden
           p.
@@ -23,16 +23,14 @@ html(dir='ltr' lang='en' class='no-js')
           p.
             Oh! And I’m looking for a #[strong 3 to 4 months internship starting July 2017 as a front-end developer], feel free to contact me on the internets (#[a(href='mailto:s.dancermichel@gmail.com') or by mail]) 😎
 
-        div.conversation__bubble.conversation__bubble--general.conversation__bubble--small.hidden
-          p ❤️
+    //- div.reactions.hidden
+    //-   div.reaction__button(onclick='clickReaction(this)' data-reaction='😸')
+    //-     p 😸
+    //-   div.reaction__button(onclick='clickReaction(this)' data-reaction='🎧')
+    //-     p 🎧
+    //-   div.reaction__button(onclick='clickReaction(this)' data-reaction='🍆')
+    //-     p 🍆
 
-    div.reactions.hidden
-      div.reaction__button(onclick='clickReaction(this)' data-reaction='😸')
-        p 😸
-      div.reaction__button(onclick='clickReaction(this)' data-reaction='🎧')
-        p 🎧
-      div.reaction__button(onclick='clickReaction(this)' data-reaction='🍆')
-        p 🍆
   script(src='js/app.min.js')
   script(type='text/javascript').
     function scrollToLastBubble () {
@@ -44,18 +42,13 @@ html(dir='ltr' lang='en' class='no-js')
     function clickReaction (e) {
       var dataReaction = e.getAttribute('data-reaction');
       var reactionBubbleEcho = '<div class="reaction__button"><p>' + dataReaction + '</p></div>';
-      var loaderBubbleEcho = '<div class="conversation__bubble conversation__bubble--loader conversation__bubble--small"><div class="loader"><div class="dot dot1"></div><div class="dot dot2"></div><div class="dot dot3"></div><div class="dot dot4"></div></div></div>';
 
       document.querySelector('.reactions').classList.add('hidden');
-      if (document.querySelector('.conversation__bubble--loader')) {
-        document.querySelector('.conversation__bubble--loader').parentNode.removeChild(document.querySelector('.conversation__bubble--loader'));
-      };
       window.setTimeout(function () {
         document.querySelector('.conversation').insertAdjacentHTML('beforeend', reactionBubbleEcho);
         scrollToLastBubble();
       }, 500);
       window.setTimeout(function () {
-        document.querySelector('.conversation').insertAdjacentHTML('beforeend', loaderBubbleEcho);
         scrollToLastBubble();
       }, 1000);
       answerTheQuestion(dataReaction);
@@ -64,9 +57,6 @@ html(dir='ltr' lang='en' class='no-js')
     // calls the creation of a bubble, at the end of a defined container
     function createBubble (container, content) {
       window.setTimeout(function () {
-        if (document.querySelector('.conversation__bubble--loader')) {
-          document.querySelector('.conversation__bubble--loader').parentNode.removeChild(document.querySelector('.conversation__bubble--loader'));
-        };
         container.insertAdjacentHTML('beforeend', '<div class="conversation__bubble conversation__bubble--general">' + content + '</div>');
       }, 1500);
     };
