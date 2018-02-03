@@ -31,13 +31,6 @@
             max-width: 100%;
             margin-top: 12px;
         }
-        &--small {
-            width: 66px;
-            height: 41px;
-            padding: 6px 22px;
-            box-sizing: border-box;
-            transform-origin: bottom;
-        }
         &.hidden {
             height: 0;
             transform: translate3d(0, 20px, 0);
@@ -47,9 +40,6 @@
             * {
                 height: 0;
             }
-        }
-        &--small.hidden {
-            transform: translate3d(0, 20px, 0) scale3d(1, 0, 1);
         }
     }
     > :last-of-type {

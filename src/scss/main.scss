@@ -20,7 +20,7 @@ h6,
 p,
 span,
 a {
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Merriweather', serif;
     font-size: 18px;
     line-height: 1.75em;
     font-weight: 300;
@@ -53,7 +53,7 @@ a {
         position: absolute;
         left: 0;
         bottom: 0;
-        transition: .1s cubic-bezier(0.22, 0.61, 0.36, 1);
+        transition: .15s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
     &:hover::after,
     &:focus::after,

@@ -5,8 +5,7 @@
     doc.classList.add('js');
 
     // Instancing a few selectors
-    var bubblesCollection = document.querySelectorAll('.conversation__bubble--general, .conversation .reaction__button');
-    var reactionsCollection = document.querySelector('.reactions');
+    var bubblesCollection = document.querySelectorAll('.conversation__bubble--general');
 
     var i = 0; // this is just an index
     // Go to the nexts item in bubblesCollection
@@ -25,9 +24,8 @@
     function changeBubble() {
         bubblesCollection[i].classList.remove('hidden');
         scrollToLastBubble();
-        if (i === 4) {
+        if (i === bubblesCollection.length - 1) {
             clearInterval(displayBubbles);
-            reactionsCollection.classList.remove('hidden');
         }
     };
     // Start the interval and the start delay
