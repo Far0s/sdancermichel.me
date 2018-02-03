@@ -31,6 +31,6 @@
         }
     };
     // Start the interval and the start delay
-    var displayBubbles = window.setInterval(nextBubble, 3000);
-    window.setTimeout(displayBubbles, 1000);
+    var displayBubbles = window.setInterval(nextBubble, 2000);
+    window.setTimeout(displayBubbles, 0);
 }());

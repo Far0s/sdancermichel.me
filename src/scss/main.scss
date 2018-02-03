@@ -47,13 +47,13 @@ a {
     position: relative;
     &::after {
         content: '';
-        background: #6CBDD3;
+        background: $teal;
         height: 2px;
         width: 0%;
         position: absolute;
         left: 0;
         bottom: 0;
-        transition: .2s cubic-bezier(0.22, 0.61, 0.36, 1);
+        transition: .1s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
     &:hover::after,
     &:focus::after,
