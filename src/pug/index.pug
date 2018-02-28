@@ -4,29 +4,52 @@ html(dir='ltr' lang='en' class='no-js')
 
   body
     div.wrapper
-      div.conversation
-        div.conversation__bubble.conversation__bubble--general.hidden
+      main.conversation
+        article.conversation__bubble.conversation__bubble--general.hidden
           p.
-            Hi! My name is #[strong Sébastien Dancer-Michel]. I am a 4th year student at #[a(href='https://hetic.net' target='_blank') HETIC], Paris.
+            Hi! I am #[strong Sébastien Dancer-Michel], a 4th year student at #[a(href='https://hetic.net' target='_blank') HETIC], Paris.
 
-        div.conversation__bubble.conversation__bubble--general.hidden
+        article.conversation__bubble.conversation__bubble--general.hidden
           p.
-            I’m a #[strong front-end developer], and I focus on creating modern, accessible and performant websites.
+            I’m a #[strong front-end developer], and I focus on creating modern, accessible and beautiful websites.
 
-        div.conversation__bubble.conversation__bubble--general.hidden
+        article.conversation__bubble.conversation__bubble--general.hidden
           p.
             I also love to fiddle with #[strong generative design] and learn about anything new in #[strong web development].
 
-        div.conversation__bubble.conversation__bubble--general.hidden
-          p.
-            🐦: #[a(href='https://twitter.com/far0s' target='_blank') tweeting] #[br]
-            👨‍💻: #[a(href='https://github.com/far0s' target='_blank') coding] #[br]
-            🔏: #[a(href='https://medium.com/@Far0s' target='_blank') writing] #[br]
-            🎨: #[a(href='https://www.behance.net/sebdancermichel' target='_blank') designing]
-
-        div.conversation__bubble.conversation__bubble--general.hidden
+        article.conversation__bubble.conversation__bubble--general.hidden
           p.
             I'm looking for a #[strong 6 month internship starting July 2018], if you'd like to know more, feel free to contact me wherever you like on the Web (#[a(href='mailto:s.dancermichel@gmail.com') or by mail]) 🙂
+
+        article.conversation__bubble.conversation__bubble--general.hidden
+          p.
+            🐦 : #[a(href='https://twitter.com/far0s' target='_blank') tweeting] #[br]
+            👨‍💻 : #[a(href='https://github.com/far0s' target='_blank') coding] #[br]
+            🔏 : #[a(href='https://medium.com/@Far0s' target='_blank') writing] #[br]
+            🎨 : #[a(href='https://www.behance.net/sebdancermichel' target='_blank') designing]
+
+        article.conversation__bubble.conversation__bubble--general.hidden.previousWorks
+          p.
+            #[strong Previously:]
+          p.
+            #[a(href='https://cinemur.fr/' target='_blank') CINÉMUR]: Web Developer - Internship - 4 months (2017)  #[button(data-casestudy='cinemur') → read more]
+          p.
+            #[a(href='https://www.synerghetic.net/' target='_blank') Synerg'hetic]: Vice-Treasurer & ISD - Junior-Company - 1 year (2017-2018) #[button(data-casestudy='synerghetic') → read more]
+
+      aside.casestudies
+        button #[p back] #[div] #[div]
+
+        article.casestudy__item#cinemur
+          div.conversation__bubble.conversation__bubble--general
+            h2 #[strong Cinemur]
+            p.
+              As an intern, I renovated the user profile, added the new 'collections' feature, and worked daily on the website's codebase.
+
+        article.casestudy__item#synerghetic
+          div.conversation__bubble.conversation__bubble--general
+            h2 #[strong Synerg'hetic]
+            p.
+              For one year I was Synerg'hetic's Vice-treasurer and Information Services Director. During this time I worked on many tools and platforms for my school's Junior-Company, such as an internal documentation or an online membership form.
 
   script(src='js/app.min.js')
   script.

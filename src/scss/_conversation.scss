@@ -11,47 +11,47 @@
     margin: auto;
     box-sizing: border-box;
     position: relative;
-    transition: .2s ease-out;
-    .conversation__bubble {
-        background: $white;
-        border-radius: 6px 6px 6px 0;
-        padding: 20px;
-        margin-bottom: 14px;
-        height: auto;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    transition: .3s ease-out, transform .5s ease-out;
+    transition-delay: .3s, .3s;
+    &.is-reading-casestudy {
+        transform: translate3d(-100%, 0, 0);
+        opacity: 0.3;
+        transition-delay: 0s, 0s;
+    }
+}
+
+.conversation__bubble {
+    background: $white;
+    padding: 20px;
+    margin-bottom: 14px;
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    transform: translate3d(0, 0px, 0) scale3d(1, 1, 1);
+    opacity: 1;
+    transition: height .5s ease-out, transform .5s ease-out, opacity .5s ease-out;
+    transform-origin: bottom;
+    p {
+        max-width: calc(100vw - 104px);
+        &+p {
+            margin-top: .8em;
+        }
+    }
+    img {
         max-width: 100%;
-        overflow: hidden;
-        transform: translate3d(0, 0px, 0) scale3d(1, 1, 1);
-        opacity: 1;
-        transition: height .5s ease-out, transform .5s ease-out, opacity .5s ease-out;
-        transform-origin: bottom;
-        p {
-            max-width: calc(100vw - 104px);
-        }
-        img {
-            max-width: 100%;
-            margin-top: 12px;
-        }
-        &.hidden {
+        margin-top: 12px;
+    }
+    &.hidden {
+        height: 0;
+        transform: translate3d(0, 20px, 0);
+        opacity: 0;
+        margin-bottom: 0;
+        padding: 0;
+        * {
             height: 0;
-            transform: translate3d(0, 20px, 0);
-            opacity: 0;
-            margin-bottom: 0;
-            padding: 0;
-            * {
-                height: 0;
-            }
         }
-    }
-    > :last-of-type {
-        margin-bottom: 60px !important;
-    }
-    &::after {
-        content: '';
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        max-width: 440px;
-        height: 100px;
-        background: linear-gradient(to top, $lightblue, $lightblue 40%, rgba($lightblue, 0));
     }
 }

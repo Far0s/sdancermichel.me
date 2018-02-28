@@ -24,11 +24,36 @@
     function changeBubble() {
         bubblesCollection[i].classList.remove('hidden');
         scrollToLastBubble();
-        if (i === bubblesCollection.length - 1) {
+        if ((i === bubblesCollection.length - 1) || document.querySelector('.conversation').classList.contains('is-reading-casestudy')) {
             clearInterval(displayBubbles);
         }
     };
     // Start the interval and the start delay
     var displayBubbles = window.setInterval(nextBubble, 2000);
     window.setTimeout(displayBubbles, 0);
+
+    // On "read more" button click, open case study (and eventually clear already open case study)
+    document.querySelectorAll('.previousWorks button').forEach(function(item) {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.casestudy__item').forEach(function(item) {
+                if (item.classList.contains('is-active')) {
+                    document.querySelector('.casestudy__item.is-active').classList.remove('is-active');
+                }
+            })
+            clearInterval(displayBubbles);
+            var caseStudyId = item.getAttribute('data-casestudy');
+            document.querySelector('.conversation').classList.add('is-reading-casestudy');
+            document.querySelector('.casestudy__item#' + caseStudyId).classList.add('is-active');
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+            })
+        })
+    });
+
+    // On "back" button click, close the open case study
+    document.querySelector('.casestudies > button').addEventListener('click', function() {
+        document.querySelector('.conversation').classList.remove('is-reading-casestudy');
+        document.querySelector('.casestudy__item.is-active').classList.remove('is-active');
+    })
 }());
