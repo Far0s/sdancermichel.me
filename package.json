@@ -37,7 +37,8 @@
         "watch:all": "npm-run-all -p bsync watch:pug watch:css watch:js watch:images",
         "postinstall": "npm run build:all && npm run watch:all",
         "start": "node --harmony-async-await index",
-        "build": "npm run postinstall"
+        "build": "npm run postinstall",
+        "now": "now && now alias"
     },
     "devDependencies": {
         "autoprefixer": "^6.3.6",
@@ -55,5 +56,9 @@
         "svg-sprite-generator": "0.0.7",
         "svgo": "^0.6.6",
         "uglify-js": "^2.6.2"
+    },
+    "now": {
+        "name": "sdancermichel.me",
+        "alias": "sdancermichel.now.sh"
     }
 }
