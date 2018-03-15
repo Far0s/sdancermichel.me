@@ -5,7 +5,7 @@
     doc.classList.add('js');
 
     // Instancing a few selectors
-    var bubblesCollection = document.querySelectorAll('.conversation__bubble--general');
+    var bubblesCollection = document.querySelectorAll('.conversation__bubble');
 
     var i = 0; // this is just an index
     // Go to the nexts item in bubblesCollection
@@ -43,6 +43,7 @@
             clearInterval(displayBubbles);
             var caseStudyId = item.getAttribute('data-casestudy');
             document.querySelector('.conversation').classList.add('is-reading-casestudy');
+            document.querySelector('body').classList.add(item.getAttribute('data-casestudy'));
             document.querySelector('.casestudy__item#' + caseStudyId).classList.add('is-active');
             window.scroll({
                 top: 0,
@@ -54,6 +55,13 @@
     // On "back" button click, close the open case study
     document.querySelector('.casestudies > button').addEventListener('click', function() {
         document.querySelector('.conversation').classList.remove('is-reading-casestudy');
+        document.querySelector('body').className = '';
         document.querySelector('.casestudy__item.is-active').classList.remove('is-active');
+        window.setTimeout(function() {
+            window.scroll({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            })
+        }, 400);
     })
 }());

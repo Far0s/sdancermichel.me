@@ -2,7 +2,7 @@
 .conversation {
     width: 100vw;
     max-width: 500px;
-    min-height: 200px;
+    min-height: 100vh;
     height: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -40,9 +40,12 @@
             margin-top: .8em;
         }
     }
-    img {
-        max-width: 100%;
-        margin-top: 12px;
+    >img {
+        max-width: 470px;
+        margin: 10px -20px 20px -20px;
+        &:last-of-type {
+            margin-bottom: -30px;
+        }
     }
     &.hidden {
         height: 0;
