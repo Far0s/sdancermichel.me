@@ -19,6 +19,7 @@
         transform: translate3d(-100%, 0, 0);
         opacity: 0.3;
         transition-delay: 0s, 0s;
+        pointer-events: none;
     }
 }
 
@@ -40,11 +41,15 @@
             margin-top: .8em;
         }
     }
-    >img {
-        max-width: 470px;
-        margin: 10px -20px 20px -20px;
-        &:last-of-type {
-            margin-bottom: -30px;
+    >img[data-action] {
+        display: block;
+        margin: 20px 0 0;
+        max-width: calc(100vw - 104px);
+        @media screen and (min-width: 540px) {
+            max-width: 100%;
+        }
+        &:not(:last-of-type) {
+            margin-bottom: 40px;
         }
     }
     &.hidden {
