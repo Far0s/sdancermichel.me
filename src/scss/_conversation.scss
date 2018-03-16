@@ -1,13 +1,13 @@
 // CONVERSATION
 .conversation {
     width: 100vw;
-    max-width: 500px;
+    max-width: 480px;
     min-height: 100vh;
     height: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-end;
-    padding: 30px;
+    padding: 14px;
     margin: auto;
     box-sizing: border-box;
     position: relative;
@@ -26,7 +26,6 @@
 .conversation__bubble {
     background: $white;
     padding: 20px;
-    margin-bottom: 14px;
     height: auto;
     max-width: 100%;
     overflow: hidden;
@@ -35,8 +34,11 @@
     opacity: 1;
     transition: height .5s ease-out, transform .5s ease-out, opacity .5s ease-out;
     transform-origin: bottom;
+    &:not(:last-of-type) {
+        margin-bottom: 14px;
+    }
     p {
-        max-width: calc(100vw - 104px);
+        max-width: calc(100vw - 68px);
         &+p {
             margin-top: .8em;
         }
@@ -44,7 +46,7 @@
     >img[data-action] {
         display: block;
         margin: 20px 0 0;
-        max-width: calc(100vw - 104px);
+        max-width: calc(100vw - 68px);
         @media screen and (min-width: 540px) {
             max-width: 100%;
         }

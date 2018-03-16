@@ -3,10 +3,10 @@
     position: absolute;
     opacity: 1;
     width: 100vw;
-    max-width: 500px;
+    max-width: 480px;
     min-height: 200px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 14px;
     box-sizing: border-box;
     transform: translate3d(0, 0, 0);
     will-change: transform;
@@ -15,8 +15,7 @@
     >.casestudy__item {
         display: none;
         position: absolute;
-        top: 30px;
-        margin-top: 44px;
+        top: 59px;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -28,7 +27,10 @@
             pointer-events: all;
         }
         >button {
-            margin-bottom: 20px;
+            margin-bottom: 14px;
+            &:last-of-type {
+                margin-top: 14px;
+            }
         }
     }
 }
