@@ -121,7 +121,7 @@ button {
         }
     }
     svg {
-        margin-bottom: 20px;
+        margin: 20px auto;
         transform: rotate(-180deg);
         will-change: transform;
         transition: .8s cubic-bezier(.66, -.87, .26, 1.57) .2s;
@@ -151,7 +151,7 @@ button {
     img.pureemaison_logo {
         display: block;
         max-width: 75px;
-        margin: 0 auto;
+        margin: 0 auto 20px;
         transform: rotateX(0);
         will-change: transform;
         transition: 1.2s cubic-bezier(.66, -.87, .26, 1.57) .2s;
@@ -180,6 +180,7 @@ button {
     }
     svg {
         transform: rotateY(-360deg);
+        margin: 20px auto;
         will-change: transform;
         transition: 1.2s cubic-bezier(.66, -.87, .26, 1.57) .2s;
         &:hover {

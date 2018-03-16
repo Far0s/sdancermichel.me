@@ -33,4 +33,7 @@
 .conversation:not(.is-reading-casestudy)+.casestudies {
     opacity: 0;
     pointer-events: none;
+    >button {
+        opacity: 0;
+    }
 }
