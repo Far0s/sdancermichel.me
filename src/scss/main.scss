@@ -48,6 +48,9 @@ button {
     justify-content: center;
     min-height: 100vh;
     height: 100%;
+    @media screen and (min-width: 540px) {
+        padding: 16px 0;
+    }
 }
 
 strong {
