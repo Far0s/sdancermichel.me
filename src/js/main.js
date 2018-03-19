@@ -5,7 +5,7 @@
     doc.classList.add('js');
 
     // Instancing a few selectors
-    var bubblesCollection = document.querySelectorAll('.conversation__bubble');
+    var bubblesCollection = document.querySelectorAll('main > .conversation__bubble');
 
     var i = 0; // this is just an index
     // Go to the nexts item in bubblesCollection
@@ -23,14 +23,14 @@
     // Stop if reached the end of the tree
     function changeBubble() {
         bubblesCollection[i].classList.remove('hidden');
-        scrollToLastBubble();
-        if ((i === bubblesCollection.length - 1) || document.querySelector('.conversation').classList.contains('is-reading-casestudy')) {
+        if ((i === bubblesCollection.length - 1)) {
             clearInterval(displayBubbles);
         }
+        scrollToLastBubble();
     };
     // Start the interval and the start delay
     var displayBubbles = window.setInterval(nextBubble, 2000);
-    window.setTimeout(displayBubbles, 0);
+    // window.setTimeout(displayBubbles, 0);
 
     // On "read more" button click, open case study (and eventually clear already open case study)
     document.querySelectorAll('.previousWorks button').forEach(function(item) {
