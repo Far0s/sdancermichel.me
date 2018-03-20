@@ -29,8 +29,8 @@
         scrollToLastBubble();
     };
     // Start the interval and the start delay
-    var displayBubbles = window.setInterval(nextBubble, 2000);
-    // window.setTimeout(displayBubbles, 0);
+    var displayBubbles = window.setInterval(nextBubble, 1500);
+    window.setTimeout(displayBubbles, 500);
 
     // On "read more" button click, open case study (and eventually clear already open case study)
     document.querySelectorAll('.previousWorks button').forEach(function(item) {
