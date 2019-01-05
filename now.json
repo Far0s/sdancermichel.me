@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "sdancermichel.me",
+  "alias": "sdancermichel.me",
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ]
+}

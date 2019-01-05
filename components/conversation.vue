@@ -1,0 +1,117 @@
+<template>
+  <main class="conversation">
+    <article class="conversation__bubble conversation__bubble--general hidden">
+      <p>Hi! I am <strong>Sébastien Dancer-Michel</strong>, a 4th year student at <a href="https://hetic.net" target="_blank">HETIC</a>, Paris.</p>
+    </article>
+
+    <article class="conversation__bubble conversation__bubble--general hidden">
+      <p>I'm <strong>creative web developer intern</strong> at <a href="https://yourmajesty.co" target="_blank">Your Majesty</a> in Amsterdam until the end of November. I'm also part of the <a href="https://junior-entreprises.com" target="_blank">CNJE</a> until July 2019.</p>
+    </article>
+
+    <article class="conversation__bubble conversation__bubble--general hidden">
+      <p>I focus on creating <strong>modern, creative and accessible</strong> interfaces. I also love to fiddle with <strong>generative design</strong> and learn about anything new in <strong>web development</strong>.</p>
+    </article>
+
+    <article class="conversation__bubble conversation__bubble--general hidden">
+      <p>I'm looking for a <strong>1 year study contract starting January 2019 in Paris.</strong> If you'd like to know more, feel free to contact me wherever you like on the Web <a href="mailto:sdancermichel.me">or by mail</a> 🙂</p>
+    </article>
+
+    <article class="conversation__bubble conversation__bubble--general hidden">
+      <p>#html #css #js #php #scss #ror #mysql #json #md #cms #wordpress #ghost #npm #webpack #a11y #performance #animation #svg #generative #opensource #cats #redpandas #lions</p>
+    </article>
+
+    <article class="conversation__bubble conversation__bubble--general hidden">
+      <p>
+        🐦 : <a href="https://twitter.com/far0s" target="_blank">tweeting</a><br>
+        👨‍💻 : <a href="https://github.com/far0s" target="_blank">coding</a><br>
+        📝 : <a href="https://medium.com/@Far0s" target="_blank">writing</a><br>
+        🎨 : <a href="https://www.behance.net/sebdancermichel" target="_blank">designing</a><br>
+        👔 : <a href="https://www.linkedin.com/in/sdancermichel/" target="_blank">networking</a><br>
+      </p>
+    </article>
+
+    <article class="conversation__bubble conversation__bubble--general hidden">
+      <p><strong>Previously:</strong></p>
+      <p><a href="https://www.synerghetic.net/" target="_blank">Synerg'hetic</a>: Vice-Treasurer & Web Developer - Junior-Enterprise - 1 year (2017-2018) <button data-casestudy="synerghetic">→ read more</button></p>
+      <p><a href="https://cinemur.fr/" target="_blank">CINÉMUR</a>: Web Developer - Internship - 4 months (2017) <button data-casestudy="cinemur">→ read more</button></p>
+      <p><a href="https://pureemaison.com/" target="_blank">Purée Maison</a>: Web Developer - internship - 3 months (2016) <button data-casestudy="pureemaison">→ read more</button></p>
+    </article>
+  </main>
+</template>
+
+<script>
+// TODO: Add conversation logic (was in JS before)
+
+export default {
+
+}
+</script>
+
+<style lang="scss">
+.conversation {
+  width: 100vw;
+  max-width: 480px;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  // justify-content: flex-end;
+  padding: 14px;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: .3s ease-out, transform .5s ease-out;
+  transition-delay: .3s, .3s;
+  &.is-reading-casestudy {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0.3;
+    transition-delay: 0s, 0s;
+    pointer-events: none;
+  }
+}
+
+.conversation__bubble {
+  background: #FEFEFE;
+  padding: 20px;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  transform: translate3d(0, 0px, 0) scale3d(1, 1, 1);
+  opacity: 1;
+  transition: height .5s ease-out, transform .5s ease-out, opacity .5s ease-out;
+  transform-origin: bottom;
+  &:not(:last-of-type) {
+    margin-bottom: 14px;
+  }
+  p {
+    max-width: calc(100vw - 68px);
+    &+p {
+      margin-top: .8em;
+    }
+  }
+  >img[data-action] {
+    display: block;
+    margin: 20px 0 0;
+    max-width: calc(100vw - 68px);
+    @media screen and (min-width: 540px) {
+      max-width: 100%;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+  }
+  &.hidden {
+    height: 0;
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+    margin-bottom: 0;
+    padding: 0;
+    * {
+      height: 0;
+    }
+  }
+}
+</style>

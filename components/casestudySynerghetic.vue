@@ -1,0 +1,98 @@
+<template>
+  <article class="casestudy__item" id="synerghetic">
+    <div class="conversation__bubble conversation__bubble--general">
+      <svg xmlns="http://www.w3.org/2000/svg" width="77" height="50" style="display:block;" viewBox="0 0 37 24" data-v-314f53c6=""><path fill="#490C66" fill-rule="evenodd" d="M13.74 11.77a12 12 0 0 1 .83-4.12 5.58 5.58 0 0 1-.9 9.25 5.48 5.48 0 0 1-8.01-5.1l2.98-.01a2.59 2.59 0 0 0 2.58 2.5 2.6 2.6 0 0 0 2.52-2.52zm4.43 3.62a7.79 7.79 0 0 0 2.18 2.54 10.58 10.58 0 0 1-9.13 5.14A11.26 11.26 0 0 1 0 11.81h3.34a7.9 7.9 0 0 0 .87 3.8 7.78 7.78 0 0 0 13.96-.22zM22.5 6.7a5.48 5.48 0 0 1 8.02 5.02h-3.04c-.01-1.41-1.2-2.7-2.61-2.62-2.18.12-2.43 2.05-2.5 2.64a14.7 14.7 0 0 1-.96 4.06 5.58 5.58 0 0 1 1.09-9.1zM24.9.44A11.26 11.26 0 0 1 36.11 11.7l-3.29.01a7.89 7.89 0 0 0-.87-3.7 7.78 7.78 0 0 0-13.95.2 7.8 7.8 0 0 0-2.35-2.67 11.02 11.02 0 0 1 9.24-5.1z" data-v-314f53c6=""></path></svg>
+      <h2><strong>Synerg'hetic</strong></h2>
+      <p>Synerg'hetic is one the best four French Junior-Enterprises since 2017. It's a student association. <br>
+      For one year I was Synerg'hetic's Vice-treasurer and Web Developer, and was part of a team of eleven students in charge of managing our Junior-Enterprise.</p>
+      <p>Synerg'hetic in a few numbers: <br>
+      - 150.000 € in turnover every year <br>
+      - 325 different clients in 13 years <br>
+      - 117 alumni <br>
+      - 40% of clients are entrepreneurs or debuting startups</p>
+
+      <p>The Junior-Entreprises movement is the biggest student movement in France, with 180 associations.</p>
+
+      <img src="/images/synergfamily.jpg" alt="Synerg'hetic's 2017/18 team" data-action="zoom">
+    </div>
+
+    <div class="conversation__bubble conversation__bubble--general">
+      <p>As <strong>Vice-treasurer</strong>, I was in charge of: <br>
+      - assisting the Treasurer in making and adjusting our budget throughout the year ; <br>
+      - tending to the accounting ; <br>
+      - monitor the payment of bills on due date.
+      </p>
+      <img src="/images/tresow.jpg" alt="Vanessa and me, enjoying the money rain" data-action="zoom">
+    </div>
+
+    <div class="conversation__bubble conversation__bubble--general">
+      <p>As <strong>Web Developer</strong>, I was in charge of monitoring, improving the many tools Synerg'hetic uses daily. I also developed new tools too!</p>
+      <p>
+        <a href="https://adhesion.synerghetic.net/" target="_blank">adhesion.synerghetic.net</a><br>
+        We designed a new online membership form (we previously did it all by paper and check) to facilitate our membership growth. We made this solution with a custom build of Wordpress and Stripe, allowing to distribute it easily between other Junior-Enterprises.
+      </p>
+
+      <img src="/images/synergadhesion.png" alt="Synerg'hetic's online membership form" data-action="zoom">
+
+      <p>
+        <a href="" disabled>synergwiki <em>private</em></a><br>
+        I pushed the initiative of creating a knowledge base where we could document every process our team was using during our one year mandate, so future generations could benefit easier on it. It's powered by Ghost, an open-source CMS project.
+      </p>
+      <img src="/images/synergwiki.png" alt="Synerg'wiki homepage" data-action="zoom">
+    </div>
+
+    <div class="conversation__bubble conversation__bubble--general">
+      <p>I also was the <strong>Community Manager of JIDF (<a href="https://juniors-idf.fr">Juniors Ile-de-France</a>)</strong>, a group of 24 Junior-Entreprises, for 6 months from December 2017 to May 2018. I was responsible for managing JIDF's image on social networks, coordinating our events communication strategy. I took the opportunity to make high-quality graphical resources for everyone to use. Being part of a movement that large is super rewarding, as I had the opportunity to meet a lot of students from very different horizons.</p>
+      <img src="/images/jidf.jpg" alt="my JIDF family" data-action="zoom">
+    </div>
+
+    <button>← back</button>
+  </article>
+</template>
+
+<style lang="scss">
+.casestudies {
+  position: absolute;
+  opacity: 1;
+  width: 100vw;
+  max-width: 480px;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 14px;
+  box-sizing: border-box;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  transition: .3s ease-out .5s, transform .5s ease-out;
+  pointer-events: all;
+  >.casestudy__item {
+    display: none;
+    position: absolute;
+    top: 59px;
+    margin: 0 0 16px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: .5s ease-out;
+    &.is-active {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    >button {
+      margin-bottom: 14px;
+      &:last-of-type {
+        margin-top: 14px;
+      }
+    }
+  }
+}
+
+.conversation:not(.is-reading-casestudy)+.casestudies {
+  opacity: 0;
+  pointer-events: none;
+  >button {
+    opacity: 0;
+  }
+}
+</style>
